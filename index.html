@@ -257,23 +257,20 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
             We present the first method capable of photorealistically reconstructing a non-rigidly
             deforming scene using photos/videos captured casually from mobile phones.
-          </p>
+          </p> -->
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            This paper presents a new algorithm, Weighted Squared Volume Minimization (WSVM), for generating high-quality tetrahedral meshes from closed triangle meshes. 
+            Drawing inspiration from the principle of minimal surfaces that minimize squared surface area, WSVM employs a new energy function integrating weighted squared volumes for tetrahedral elements. 
+            When minimized with constant weights, this energy promotes uniform volumes among the tetrahedra. Adjusting the weights to account for local geometry further achieves uniform dihedral angles within the mesh. 
+            The algorithm begins with an initial tetrahedral mesh generated via Delaunay tetrahedralization and proceeds by sequentially minimizing volume-oriented and then dihedral angle-oriented energies. 
+            At each stage, it alternates between optimizing vertex positions and refining mesh connectivity through the iterative process. 
+            The algorithm operates fully automatically and requires no parameter tuning. 
+            Evaluations on a variety of 3D models demonstrate that WSVM consistently produces tetrahedral meshes of higher quality, with fewer slivers and enhanced uniformity compared to existing methods.
           </p>
-          <p>
+          <!-- <p>
             We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
             photos/videos into deformable NeRF
             models that allow for photorealistic renderings of the subject from arbitrary
@@ -283,7 +280,7 @@
             images of the same pose at different viewpoints. We show that our method faithfully
             reconstructs non-rigidly deforming scenes and reproduces unseen views with high
             fidelity.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
