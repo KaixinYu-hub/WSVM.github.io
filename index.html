@@ -20,7 +20,7 @@
     }
 	</script>
 
-  <title>MIRReS: Multi-bounce Inverse Rendering using Reservoir Sampling</title>
+  <title>Weighted Squared Volume Minimization (WSVM) for Generating Uniform Tetrahedral Meshes</title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
   <div class="container" id="header" style="text-align: center; margin: auto;">
     <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto;" >
       <h2 class="col-md-10 col-md-offset-1  text-center" id="title">
-        <b>MIRReS</b>: Multi-bounce Inverse Rendering using Reservoir Sampling for NeRF
+        Weighted Squared Volume Minimization (WSVM) for Generating Uniform Tetrahedral Meshes
       </h2>
       
     </div>
@@ -75,13 +75,18 @@
       <div class="col-sm-10 col-sm-offset-1 text-center">
         <ul class="list-inline" >
           
-          <li> <a href="https://brabbitdousha.github.io/">Yuxin Dai</a> </li>
-          <li> Qi Wang </li>
-          <li> <a href="https://jingsenzhu.github.io/">Jingsen Zhu</a> </li>
-          <li> Dianbing Xi</li>
-          <li> <a href="http://www.cad.zju.edu.cn/home/huo/">Yuchi Huo</a> </li>
-          <li> <a href="">Chen Qian</a> </li> <br>
-          <li> <a href="https://personal.ntu.edu.sg/yhe/">Ying He</a> </li>
+          <li> Kaixin Yu<sup>*1,2</sup> </li>
+          <li> Yifu Wang<sup>*1</sup> </li>
+          <li> Peng Song</a><sup>3</sup> </li>
+          <li> Xiangqiao Meng<sup>4</sup> </li>
+          <li> <a href="https://personal.ntu.edu.sg/yhe/" target="_blank">Ying He</a><sup>2†</sup> </li>
+          <li> <a href="https://person.zju.edu.cn/jjchen" target="_blank">Jianjun Chen</a><sup>1†</sup> </li>
+          <br>
+          <li> <sup>1</sup> School of Aeronautics and Astronautics, Zhejiang University, Hangzhou, China. </li>
+          <li> <sup>2</sup> College of Computing and Data Science, Nanyang Technological University, Singapore. </li>
+          <li> <sup>3</sup> Pillar of Information Systems Technology and Design, Singapore University of Technology and Design, Singapore. </li>
+          <li> <sup>4</sup> Department of Computing, The Hong Kong Polytechnic University, Hong Kong, China. </li>
+
         </ul>
       </div>
     </div>
@@ -150,8 +155,14 @@
         <!-- bigger text size -->
         <div class="text-justify" style="font-size: 1.2em;">
     
-          We present MIRReS, a novel two-stage inverse rendering framework that jointly reconstructs and optimizes explicit geometry, materials, and lighting from multi-view images. Unlike previous methods that rely on implicit irradiance fields or oversimplified path tracing algorithms, our method first extracts an explicit triangular mesh in the initial stage. Subsequently, it employs a more realistic physically-based inverse rendering model in the second stage, utilizing multi-bounce path tracing and Monte Carlo integration. By leveraging multi-bounce path tracing, our method not only effectively estimates indirect illumination--including self-shadowing and internal reflections--but also enhances the intrinsic decomposition of shape, material, and lighting. Moreover, we incorporate reservoir sampling into our framework to address the noise in Monte Carlo integration, enhancing convergence and facilitating gradient-based optimization with low sample counts. Through both qualitative and quantitative assessments across various scenarios, especially those with complex shadows, we demonstrate that our method achieves state-of-the-art performance in decomposition results. Additionally, our optimized explicit geometry supports further applications in scene editing, relighting, and material editing, compatible with modern graphics engines and CAD software.
-        </div>
+          This paper presents a new algorithm, Weighted Squared Volume Minimization (WSVM), for generating high-quality tetrahedral meshes from closed triangle meshes. 
+            Drawing inspiration from the principle of minimal surfaces that minimize squared surface area, WSVM employs a new energy function integrating weighted squared volumes for tetrahedral elements. 
+            When minimized with constant weights, this energy promotes uniform volumes among the tetrahedra. Adjusting the weights to account for local geometry further achieves uniform dihedral angles within the mesh. 
+            The algorithm begins with an initial tetrahedral mesh generated via Delaunay tetrahedralization and proceeds by sequentially minimizing volume-oriented and then dihedral angle-oriented energies. 
+            At each stage, it alternates between optimizing vertex positions and refining mesh connectivity through the iterative process. 
+            The algorithm operates fully automatically and requires no parameter tuning. 
+            Evaluations on a variety of 3D models demonstrate that WSVM consistently produces tetrahedral meshes of higher quality, with fewer slivers and enhanced uniformity compared to existing methods.
+          </div>
         <div class="container is-max-desktop has-text-centered">
           <h2 class="title">Albedo results and relighting results</h2>
           <div class="hero-body">
