@@ -163,44 +163,64 @@
             The algorithm operates fully automatically and requires no parameter tuning. 
             Evaluations on a variety of 3D models demonstrate that WSVM consistently produces tetrahedral meshes of higher quality, with fewer slivers and enhanced uniformity compared to existing methods.
           </div>
-        <div class="container is-max-desktop has-text-centered">
-          <h2 class="title">Albedo results and relighting results</h2>
-          <div class="hero-body">
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <div class="content">
-                  <div class="b-dics">
-                    <img src="files/images/lego_albedo/gt_kd_0.png" alt="GT" />
-                    <img src="files/images/lego_albedo/ours_kd_0.png" alt="OURS" />
-                    <img src="files/images/lego_albedo/tensoir_kd_0.png" alt="TensoIR" />
+          <div class="container is-max-desktop has-text-centered">
+            <h2 class="title">Quality comparison between the input model, the initial tetrahedral mesh, and the optimized results of WSVM (with quality values, where 0 is best)</h2>
+            <div class="hero-body">
+              <div class="columns is-centered has-text-centered">
+                <!-- Wrap the existing four columns inside one column -->
+                <div class="column is-four-fifths">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="content">
+                        <div class="b-dics">
+                          <img src="files/images/xiangpu_input.png" alt="input" />
+                          <img src="files/images/xiangpu_init.png" alt="init" />
+                          <img src="files/images/xiangpu_cout.png" alt="WSVM" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="content">
+                        <div class="b-dics">
+                          <img src="files/images/shrek_input.png" alt="input" />
+                          <img src="files/images/shrek_init.png" alt="initial" />
+                          <img src="files/images/shrek_cout.png" alt="WSVM" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="content">
+                        <div class="b-dics">
+                          <img src="files/images/hand_input.png" alt="input" />
+                          <img src="files/images/hand_init.png" alt="initial" />
+                          <img src="files/images/hand_cout.png" alt="WSVM" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="content">
+                        <div class="b-dics">
+                          <img src="files/images/bust_input.png" alt="input" />
+                          <img src="files/images/bust_init.png" alt="initial" />
+                          <img src="files/images/bust_cout.png" alt="WSVM" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <div class="b-dics">
-                    <img src="files/images/lego_albedo/GT_lego_relight.png" alt="GT" />
-                    <img src="files/images/lego_albedo/ours_lego_relight.png" alt="OURS" />
-                    <img src="files/images/lego_albedo/tensoir_lego_relight.png" alt="TensoIR" />
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <div class="b-dics">
-                    <img src="files/images/lego_albedo/gt_hotdog.png" alt="GT" />
-                    <img src="files/images/lego_albedo/ours_hotdog.png" alt="OURS" />
-                    <img src="files/images/lego_albedo/nvmc_hotdog.png" alt="NVDiffRecMC" />
-                  </div>
+                <!-- Add a new column for the colorbar -->
+                <div class="column is-one-quarter">
+                  <img src="files/images/colorbar.png" alt="colorbar" style="max-height: 80vh; width: auto; display: block; margin: auto;" />
                 </div>
               </div>
             </div>
           </div>
+          
 
           <div class="container is-max-desktop has-text-centered">
             <h2 class="title">Normal results</h2>
             <div align="center">
-              <img src="files/images/abl/normal_lego.png" alt="Image" style="width: 70%;"/>
+              <img src="files/images/pegaso.gif" alt="Image" style="width: 70%;"/>
             </div>
           </div>
         </div>
