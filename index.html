@@ -123,6 +123,17 @@
         </div>
         <div align="center">
           <img src="files/images/pipeline.jpg" />
+          <p class="caption">
+            Algorithmic pipeline. (a) Our method takes a set of watertight, high-quality manifold triangular meshes as
+            the input boundaries. (b) The initial tetrahedral mesh, constructed via Delaunay tetrahedralization,
+            contains numerous slivers. Slivers with dihedral angles less than $30^\circ$ are rendered in red. Minimizing
+            the volume-oriented energy improves the uniformity of the volume of tetrahedra. (c) Subsequently, minimizing
+            the diheral angle-oriented energy further reduces the number of slivers. (d) The final tetrahedral mesh
+            exhibits significantly improved mesh quality. The red and blue histograms represent the volume distribution
+            and dihedral angle distribution of tetrahedral elements, respectively.
+            In each angle histogram, we indicate the range of dihedral angles $[\theta_{\min}, \theta_{\max}]$ via short
+            solid lines and the average of the minimal and maximal angles $\theta_{\min}^{\mathrm{avg}}$ and
+            $\theta_{\max}^{\mathrm{avg}}$ via long dashed lines.</p>
         </div>
 
         <br>
@@ -220,6 +231,12 @@
           <h2 class="title">Comparison Method</h2> <!-- 可选的标题 -->
           <div align="center">
             <img src="files/images/compare_method.png" alt="Comparison Method" style="width: 90%; margin: auto;" />
+            <p class="caption">
+              Comparison of WSVM with various methods, for the first two models, elements with dihedral angles less than
+              30 degrees are rendered in red. For the latter two models, we show the mesh visualization colored by
+              equiangle skewness values, along with corresponding histograms indicating the distribution of skewness
+              values. The histograms highlight the minimum, average, and maximum skewness values, represented by green
+              bars on the plot.</p>
           </div>
         </div>
 
