@@ -11,14 +11,14 @@
     document.addEventListener('DOMContentLoaded', domReady);
     function domReady() {
       var b = document.querySelectorAll('.b-dics');
-      b.forEach(element => 
+      b.forEach(element =>
         new Dics({
           container: element,
           textPosition: 'top'
         })
       );
     }
-	</script>
+  </script>
 
   <title>Weighted Squared Volume Minimization (WSVM) for Generating Uniform Tetrahedral Meshes</title>
 
@@ -54,9 +54,9 @@
 </head>
 
 <body>
-  
+
   <div class="container" id="header" style="text-align: center; margin: auto;">
-    <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto;" >
+    <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto;">
       <h2 class="col-md-10 col-md-offset-1  text-center" id="title">
         Weighted Squared Volume Minimization (WSVM) for Generating Uniform Tetrahedral Meshes
       </h2>
@@ -70,8 +70,8 @@
   <div class="container" id="main">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 text-center">
-        <ul class="list-inline" >
-          
+        <ul class="list-inline">
+
           <li> Kaixin Yu<sup>*1,2</sup> </li>
           <li> Yifu Wang<sup>*1</sup> </li>
           <li> Peng Song</a><sup>3</sup> </li>
@@ -81,7 +81,8 @@
           <br>
           <li> <sup>1</sup> School of Aeronautics and Astronautics, Zhejiang University, Hangzhou, China. </li>
           <li> <sup>2</sup> College of Computing and Data Science, Nanyang Technological University, Singapore. </li>
-          <li> <sup>3</sup> Pillar of Information Systems Technology and Design, Singapore University of Technology and Design, Singapore. </li>
+          <li> <sup>3</sup> Pillar of Information Systems Technology and Design, Singapore University of Technology and
+            Design, Singapore. </li>
           <li> <sup>4</sup> Department of Computing, The Hong Kong Polytechnic University, Hong Kong, China. </li>
 
         </ul>
@@ -99,143 +100,163 @@
       <div class="col-md-11 col-md-offset-1 ">
 
         <h3>
-        <b>Abstract</b>
+          <b>Abstract</b>
         </h3>
         <hr>
         <div class="row">
         </div>
         <!-- bigger text size -->
         <div class="text-justify" style="font-size: 1.2em;">
-          This paper presents a new algorithm, Weighted Squared Volume Minimization (WSVM), for generating high-quality tetrahedral meshes from closed triangle meshes. 
-            Drawing inspiration from the principle of minimal surfaces that minimize squared surface area, WSVM employs a new energy function integrating weighted squared volumes for tetrahedral elements. 
-            When minimized with constant weights, this energy promotes uniform volumes among the tetrahedra. Adjusting the weights to account for local geometry further achieves uniform dihedral angles within the mesh. 
-            The algorithm begins with an initial tetrahedral mesh generated via Delaunay tetrahedralization and proceeds by sequentially minimizing volume-oriented and then dihedral angle-oriented energies. 
-            At each stage, it alternates between optimizing vertex positions and refining mesh connectivity through the iterative process. 
-            The algorithm operates fully automatically and requires no parameter tuning. 
-            Evaluations on a variety of 3D models demonstrate that WSVM consistently produces tetrahedral meshes of higher quality, with fewer slivers and enhanced uniformity compared to existing methods.
-          </div>
-          <div align="center">
-            <img src="files/images/pipeline.jpg"/>
+          This paper presents a new algorithm, Weighted Squared Volume Minimization (WSVM), for generating high-quality
+          tetrahedral meshes from closed triangle meshes.
+          Drawing inspiration from the principle of minimal surfaces that minimize squared surface area, WSVM employs a
+          new energy function integrating weighted squared volumes for tetrahedral elements.
+          When minimized with constant weights, this energy promotes uniform volumes among the tetrahedra. Adjusting the
+          weights to account for local geometry further achieves uniform dihedral angles within the mesh.
+          The algorithm begins with an initial tetrahedral mesh generated via Delaunay tetrahedralization and proceeds
+          by sequentially minimizing volume-oriented and then dihedral angle-oriented energies.
+          At each stage, it alternates between optimizing vertex positions and refining mesh connectivity through the
+          iterative process.
+          The algorithm operates fully automatically and requires no parameter tuning.
+          Evaluations on a variety of 3D models demonstrate that WSVM consistently produces tetrahedral meshes of higher
+          quality, with fewer slivers and enhanced uniformity compared to existing methods.
+        </div>
+        <div align="center">
+          <img src="files/images/pipeline.jpg" />
         </div>
 
         <br>
-<br>
- <!-- 新增图像行 -->
- <div class="container is-max-desktop has-text-centered">
-  <h2 class="title">The change of tetrahedra with minimum dihedral angles less than 30 degrees during optimization.</h2>
-  <div class="columns is-centered has-text-centered">
-    <div class="column">
-      <div class="content">
-        <img src="files/images/ant.gif" alt="ant" style="width: 50%; max-width: 200px; display: block; margin: auto;">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="files/images/Chinese_lion.gif" alt="Chinese Lion" style="width: 100%; max-width: 200px; display: block; margin: auto;">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="files/images/deer.gif" alt="deer" style="width: 100%; max-width: 200px; display: block; margin: auto;">
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="files/images/pegaso.gif" alt="pegaso" style="width: 100%; max-width: 200px; display: block; margin: auto;">
-      </div>
-    </div>
-  </div>
-</div>
+        <br>
+        <!-- 新增图像行 -->
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">The change of tetrahedra with minimum dihedral angles less than 30 degrees during
+            optimization.</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column">
+              <div class="content">
+                <img src="files/images/ant.gif" alt="ant"
+                  style="width: 50%; max-width: 200px; display: block; margin: auto;">
+              </div>
+            </div>
+            <div class="column">
+              <div class="content">
+                <img src="files/images/Chinese_lion.gif" alt="Chinese Lion"
+                  style="width: 100%; max-width: 200px; display: block; margin: auto;">
+              </div>
+            </div>
+            <div class="column">
+              <div class="content">
+                <img src="files/images/deer.gif" alt="deer"
+                  style="width: 100%; max-width: 200px; display: block; margin: auto;">
+              </div>
+            </div>
+            <div class="column">
+              <div class="content">
+                <img src="files/images/pegaso.gif" alt="pegaso"
+                  style="width: 100%; max-width: 200px; display: block; margin: auto;">
+              </div>
+            </div>
+          </div>
+        </div>
 
-<br>
-<br>
-          <div class="container is-max-desktop has-text-centered">
-            <h2 class="title">Quality comparison between the input model, the initial tetrahedral mesh, and the optimized results of WSVM (with quality values, where 0 is best)</h2>
-            <div class="hero-body">
-              <div class="columns is-centered has-text-centered">
-                <!-- Wrap the existing four columns inside one column -->
-                <div class="column is-four-fifths">
-                  <div class="columns">
-                    <div class="column">
-                      <div class="content">
-                        <div class="b-dics">
-                          <img src="files/images/xiangpu_input.png" alt="input" />
-                          <img src="files/images/xiangpu_init.png" alt="init" />
-                          <img src="files/images/xiangpu_cout.png" alt="WSVM" />
-                        </div>
+        <br>
+        <br>
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">Quality comparison between the input model, the initial tetrahedral mesh, and the optimized
+            results of WSVM (with quality values, where 0 is best)</h2>
+          <div class="hero-body">
+            <div class="columns is-centered has-text-centered">
+              <!-- Wrap the existing four columns inside one column -->
+              <div class="column is-four-fifths">
+                <div class="columns">
+                  <div class="column">
+                    <div class="content">
+                      <div class="b-dics">
+                        <img src="files/images/xiangpu_input.png" alt="input" />
+                        <img src="files/images/xiangpu_init.png" alt="init" />
+                        <img src="files/images/xiangpu_cout.png" alt="WSVM" />
                       </div>
                     </div>
-                    <div class="column">
-                      <div class="content">
-                        <div class="b-dics">
-                          <img src="files/images/shrek_input.png" alt="input" />
-                          <img src="files/images/shrek_init.png" alt="initial" />
-                          <img src="files/images/shrek_cout.png" alt="WSVM" />
-                        </div>
+                  </div>
+                  <div class="column">
+                    <div class="content">
+                      <div class="b-dics">
+                        <img src="files/images/shrek_input.png" alt="input" />
+                        <img src="files/images/shrek_init.png" alt="initial" />
+                        <img src="files/images/shrek_cout.png" alt="WSVM" />
                       </div>
                     </div>
-                    <div class="column">
-                      <div class="content">
-                        <div class="b-dics">
-                          <img src="files/images/hand_input.png" alt="input" />
-                          <img src="files/images/hand_init.png" alt="initial" />
-                          <img src="files/images/hand_cout.png" alt="WSVM" />
-                        </div>
+                  </div>
+                  <div class="column">
+                    <div class="content">
+                      <div class="b-dics">
+                        <img src="files/images/hand_input.png" alt="input" />
+                        <img src="files/images/hand_init.png" alt="initial" />
+                        <img src="files/images/hand_cout.png" alt="WSVM" />
                       </div>
                     </div>
-                    <div class="column">
-                      <div class="content">
-                        <div class="b-dics">
-                          <img src="files/images/bust_input.png" alt="input" />
-                          <img src="files/images/bust_init.png" alt="initial" />
-                          <img src="files/images/bust_cout.png" alt="WSVM" />
-                        </div>
+                  </div>
+                  <div class="column">
+                    <div class="content">
+                      <div class="b-dics">
+                        <img src="files/images/bust_input.png" alt="input" />
+                        <img src="files/images/bust_init.png" alt="initial" />
+                        <img src="files/images/bust_cout.png" alt="WSVM" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- Add a new column for the colorbar -->
-                <div class="column is-one-quarter">
-                  <img src="files/images/colorbar.png" alt="colorbar" style="max-height: 80vh; width: auto; display: block; margin: auto;" />
-                </div>
+              </div>
+              <!-- Add a new column for the colorbar -->
+              <div class="column is-one-quarter">
+                <img src="files/images/colorbar.png" alt="colorbar"
+                  style="max-height: 80vh; width: auto; display: block; margin: auto;" />
               </div>
             </div>
           </div>
-          
-          <div class="container is-max-desktop has-text-centered">
-            <h2 class="title">Comparison Method</h2> <!-- 可选的标题 -->
-            <div align="center">
-                <img src="files/images/compare_method.png" alt="Comparison Method" style="width: 90%; margin: auto;"/>
-            </div>
         </div>
-        
+
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title">Comparison Method</h2> <!-- 可选的标题 -->
+          <div align="center">
+            <img src="files/images/compare_method.png" alt="Comparison Method" style="width: 90%; margin: auto;" />
+          </div>
+        </div>
+
         <br>
         <br>
         <br>
         <div class="container is-max-desktop has-text-centered">
-          <h2 class="title">More results</h2> <!-- 可选的标题 -->
+          <h2 class="title">More results</h2> <!-- Optional title -->
           <div align="center">
-              <img src="files/images/gallery.png" alt="Comparison Method" style="width: 90%; margin: auto;"/>
+            <img src="files/images/gallery.png" alt="Comparison Method" style="width: 90%; margin: auto;" />
+            <p class="caption">
+              Visualization of selected results across the test models. For each model, we present: a slice view of
+              Equiangle Skewness quality, a visualization highlighting tetrahedra with minimum dihedral angles less than
+              30 degrees, and histograms depicting the distribution of dihedral angles (blue) and tetrahedron volumes
+              (red).
+            </p>
           </div>
-      </div>
+        </div>
       </div>
     </div>
-    <br>
+  </div>
+  <br>
 
-    <div class="row">
-      <div class="col-md-11 col-md-offset-1 ">
-        <h3>
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1 ">
+      <h3>
         <b>Acknowledgements</b>
         <hr>
-        </h3>
-        Some code for this website was borrowed from 
-          <A href="https://haian-jin.github.io/TensoIR/">TensoIR</A> and <A
-          href="https://isaac-paradox.github.io/FuseSR/">FuseSR</A>.
-      </div>
-      <br>
+      </h3>
+      Some code for this website was borrowed from
+      <A href="https://haian-jin.github.io/TensoIR/">TensoIR</A> and <A
+        href="https://isaac-paradox.github.io/FuseSR/">FuseSR</A>.
     </div>
     <br>
-    <br>
+  </div>
+  <br>
+  <br>
   </div>
 </body>
 
