@@ -3,6 +3,9 @@
 
 <head lang="en">
   <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+  <!-- 加载 MathJax -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
   <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
   <link rel="stylesheet" href="./definitive-image-comparison-slider-master/src/dics.css">
@@ -125,15 +128,19 @@
           <img src="files/images/pipeline.jpg" />
           <p class="caption">
             Algorithmic pipeline. (a) Our method takes a set of watertight, high-quality manifold triangular meshes as
-            the input boundaries. (b) The initial tetrahedral mesh, constructed via Delaunay tetrahedralization,
-            contains numerous slivers. Slivers with dihedral angles less than $30^\circ$ are rendered in red. Minimizing
+            the input boundaries. (b) The initial tetrahedral mesh, constructed via Delaunay tetrahedralization.
+            Elements with dihedral angles less than \(30^\circ\) are rendered in red.
+            Minimizing
             the volume-oriented energy improves the uniformity of the volume of tetrahedra. (c) Subsequently, minimizing
-            the diheral angle-oriented energy further reduces the number of slivers. (d) The final tetrahedral mesh
-            exhibits significantly improved mesh quality. The red and blue histograms represent the volume distribution
+            the dihedral angle-oriented energy further reduces the number of bad elements. (d) The final high quality
+            tetrahedral
+            mesh. The red and blue histograms represent the volume distribution
             and dihedral angle distribution of tetrahedral elements, respectively.
-            In each angle histogram, we indicate the range of dihedral angles $[\theta_{\min}, \theta_{\max}]$ via short
-            solid lines and the average of the minimal and maximal angles $\theta_{\min}^{\mathrm{avg}}$ and
-            $\theta_{\max}^{\mathrm{avg}}$ via long dashed lines.</p>
+            In each angle histogram, we indicate the range of dihedral angles \([\theta_{\min}, \theta_{\max}]\) via
+            short
+            solid lines and the average of the minimal and maximal angles \(\theta_{\min}^{\mathrm{avg}}\) and
+            \(\theta_{\max}^{\mathrm{avg}}\) via long dashed lines.
+          </p>
         </div>
 
         <br>
